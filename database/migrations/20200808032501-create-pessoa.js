@@ -17,17 +17,17 @@ module.exports = {
         type: DataTypes.STRING,
         unique: true,
       },
-      password: {
+      endereco: {
         allowNull: false,
         type: DataTypes.STRING,
       },
-      createdAt: {
+      sexo: {
         allowNull: false,
-        type: DataTypes.DATE,
+        type: DataTypes.CHAR,
       },
-      updatedAt: {
-        allowNull: false,
-        type: DataTypes.DATE,
+      ic_ativo: {
+        allowNull: true,
+        type: DataTypes.BOOLEAN,
       },
     });
   },

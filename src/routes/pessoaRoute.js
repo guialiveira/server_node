@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/pessoaController')
-/* router.post('', controller.post);
+/* router.post('', controller.post);   //Esse trecho vai mandar para o controller fazer as operações 
 router.put('/:id', controller.put);
 router.delete('/:id', controller.delete);
 router.get('/', controller.get); */
 var models  = require('../../models');
+const { pessoa } = require('../../models'); //Definindo que toda pessoa seqgue esse model
 
 router.post('/pessoa', function(req, res) {
     models.pessoa.create(
@@ -17,6 +18,11 @@ router.post('/pessoa', function(req, res) {
     });
   });
   
+  /* app.post('/register', async (req, res) => {//post = criar
+    const pessoa = await Pessoa.create(req.body); // A pessoa que vier do servideor vai estar no req.body
+    res.json(pessoa);
+  }); */
+
   router.put('/pessoa/:id', function(req, res) {
     models.pessoa.findById(
       req.params.id
