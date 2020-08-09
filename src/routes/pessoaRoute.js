@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/pessoaController')
-router.post('', controller.post);
+/* router.post('', controller.post);
 router.put('/:id', controller.put);
 router.delete('/:id', controller.delete);
-router.get('/', controller.get);
+router.get('/', controller.get); */
 var models  = require('../../models');
 
 router.post('/pessoa', function(req, res) {
