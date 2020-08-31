@@ -1,4 +1,4 @@
-Pra executar o peojeto:
+Para executar o peojeto:
 
 *Instalar e startar mysql com user: root, senha:123456;
 
